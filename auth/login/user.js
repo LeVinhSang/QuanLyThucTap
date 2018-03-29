@@ -16,13 +16,6 @@ class User {
         return this.user_name;
     }
 
-    /**
-     *
-     * @param {string} password
-     */
-    setPassword(password) {
-        this.password = password;
-    }
 
     /**
      *
@@ -31,6 +24,17 @@ class User {
     getPassword() {
         return this.password;
     }
+
+
+    /**
+     *
+     * @param {string} password
+     */
+    setPassword(password) {
+        this.password = password;
+    }
+
+    set
 
 }
 
