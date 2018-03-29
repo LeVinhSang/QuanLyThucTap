@@ -14,11 +14,12 @@ class InternShipRegistrationService {
         })
     }
 
-    confirm(registration) {
+    confirm(id) {
         return this.knex.from('registrations').update({
             status: status.CONFIRMED
-        }).where('id', registration.getId());
+        }).where('id', id);
     }
+
 }
 
 module.exports = InternShipRegistrationService;

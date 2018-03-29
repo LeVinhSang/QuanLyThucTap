@@ -1,7 +1,7 @@
 class Course {
-    constructor(duration) {
+    constructor(duration)
 
-    }
+
 }
 
 module.exports = Course;
