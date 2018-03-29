@@ -1,4 +1,4 @@
-const UserFactory = require('../../src/user/userFactory');
+const UserFactory = require('../../auth/login/userFactory');
 
 let   userFactory = new UserFactory();
 

@@ -5,6 +5,8 @@ const userRequest    = require('../http/middleware/user-request');
 
 let userController   = new UserController();
 
+
+router.get('/user/:user_name');
 router.post('/user', userRequest, userController.create);
 router.put('/user', userRequest, userController.update);
 router.delete('/user', userController.remove);
