@@ -1,3 +1,5 @@
+const status = require('./registration-statuses');
+
 class InternShipRegistrationService {
 
     constructor(knex) {
@@ -8,15 +10,16 @@ class InternShipRegistrationService {
         return this.knex.from('registrations').insert({
             intern_id: registration.getIntern().getId(),
             intern_ship_id: registration.getInternShip().getId(),
-            status: 'PENDING'
+            status: status.PENDING
         })
     }
 
-    confirm(registration) {
+    confirm(id) {
         return this.knex.from('registrations').update({
-            status: 'CONFIRMED'
-        }).where('id', registration.getId());
+            status: status.CONFIRMED
+        }).where('id', id);
     }
+
 }
 
 module.exports = InternShipRegistrationService;
