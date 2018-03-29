@@ -5,8 +5,44 @@ class Internship {
         this.companyManager = companyManager;
     }
 
+    /**
+     *
+     * @return {Duration}
+     */
+    getDuration() {
+        return this.duration;
+    }
+
+    /**
+     *
+     * @return {Internship}
+     */
     getList() {
         return this.internShipList;
+    }
+
+    /**
+     *
+     * @return {CompanyManager}
+     */
+    getCompananyManager() {
+        return this.companyManager;
+    }
+
+    /**
+     *
+     * @return {int|*}
+     */
+    getId() {
+        return this.id;
+    }
+
+    /**
+     *
+     * @param {int} id
+     */
+    setId(id) {
+        this.id =id;
     }
 }
 
