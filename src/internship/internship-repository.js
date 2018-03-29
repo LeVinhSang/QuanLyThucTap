@@ -1,10 +1,10 @@
 class InternshipRepository {
 
-    constructor(knex) {
-        this.knex = knex;
+    constructor(connection) {
+        this.connection = connection;
     }
 
     all() {
-        // todo
+        return this.connection.select().from('internship');
     }
 }

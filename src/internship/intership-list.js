@@ -1,6 +1,7 @@
 class InternshipList {
 
     constructor(lecturer, interns = []) {
+        this.lecturer = lecturer;
         this.interns = interns;
     }
 
@@ -9,6 +10,10 @@ class InternshipList {
             status: 'PENDING',
             intern: intern
         })
+    }
+
+    getLecturer() {
+        return this.lecturer;
     }
 
     // todo
