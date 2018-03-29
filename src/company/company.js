@@ -8,8 +8,12 @@ class Company {
         this.name = name;
     }
 
-    getContact() {
-        return this.contact;
+    /**
+     *
+     * @return {int}
+     */
+    getPhone() {
+        return this.phone;
     }
 
     /**
@@ -22,6 +26,22 @@ class Company {
 
     /**
      *
+     * @return {string}
+     */
+    getAddress() {
+        return this.address;
+    }
+
+    /**
+     *
+     * @return {string|*}
+     */
+    getEmail() {
+        return this.email;
+    }
+
+    /**
+     *
      * @param {int} id
      */
     setId(id) {
@@ -30,10 +50,27 @@ class Company {
 
     /**
      *
-     * @param {Contact} contact
+     * @param {integer} phone
      */
-    setContact(contact) {
-        this.contact = contact;
+    setPhone(phone) {
+        this.phone = phone;
+    }
+
+
+    /**
+     *
+     * @param {string} email
+     */
+    setEmail(email) {
+        this.email = email;
+    }
+
+    /**
+     *
+     * @param {string} address
+     */
+    setAddress(address) {
+        this.address = address;
     }
 }
 

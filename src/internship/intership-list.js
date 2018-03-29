@@ -6,7 +6,6 @@ class InternshipList {
 
     addIntern(intern) {
         this.interns.push({
-            status: 'PENDING',
             intern: intern
         })
     }

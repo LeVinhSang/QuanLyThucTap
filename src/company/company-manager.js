@@ -32,10 +32,10 @@ class CompanyManager {
 
     /**
      *
-     * @return {Contact|*}
+     * @return {int|*}
      */
-    getContact() {
-        return this.contact;
+    getPhone() {
+        return this.phone;
     }
 
     /**
@@ -48,11 +48,44 @@ class CompanyManager {
 
     /**
      *
-     * @param {Contact} contact
+     * @param {int} phone
      */
-    setContact(contact) {
-        this.contact = contact;
+    setPhone(phone) {
+        this.phone = phone;
     }
+
+    /**
+     *
+     * @param {string} email
+     */
+    setEmail(email) {
+        this.email = email;
+    }
+
+    /**
+     *
+     * @return {string|*}
+     */
+    getEmail() {
+        return this.email;
+    }
+
+    /**
+     *
+     * @param {string} address
+     */
+    setAddress(address) {
+        this.address = address;
+    }
+
+    /**
+     *
+     * @return {string|*}
+     */
+    getAddress() {
+        return this.address;
+    }
+
 }
 
 module.exports = CompanyManager;

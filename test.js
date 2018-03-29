@@ -1,19 +1,14 @@
-let cookieSession = require('cookie-session');
-let express = require('express');
+const knex                          = require('./database/knex-connection');
+const InternshipRegistrationService = require('./src/internship-registration/internship-registration-service');
 
-let app = express();
 
-app.set('trust proxy', 1) ;// trust first proxy
+let internshipRegistrationService = new InternshipRegistrationService(knex);
 
-app.use(cookieSession({
-    name: 'session',
-    keys: ['key1', 'key2']
-}));
+let registration = {'intern_id': 1, 'intern_ship_id': 1, 'status': 'pending'};
 
-app.use(function (req, res, next) {
-    let n = req.session.views || 0;
-    req.session.views = n++;
-    res.end(n + ' views')
-})
-;
-app.listen(8080);
+function Test() {
+    internshipRegistrationService.send(registration);
+    console.log('success')
+}
+
+Test();

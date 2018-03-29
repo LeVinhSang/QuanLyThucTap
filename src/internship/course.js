@@ -1,5 +1,7 @@
 class Course {
-    constructor(duration)
+    constructor(duration, status) {
+
+    }
 
 
 }

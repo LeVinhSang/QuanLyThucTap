@@ -34,18 +34,50 @@ class Intern {
 
     /**
      *
-     * @return {Contact|*}
+     * @return {int|*}
      */
-    getContact() {
-        return this.contact;
+    getPhone() {
+        return this.phone;
     }
 
     /**
      *
-     * @param {Contact} contact
+     * @return {string|*}
      */
-    setContact(contact) {
-        this.contact = contact;
+    getEmail() {
+        return this.email;
+    }
+
+    /**
+     *
+     * @return {string|*}
+     */
+    getAddress() {
+        return this.address;
+    }
+
+    /**
+     *
+     * @param {int} phone
+     */
+    setPhone(phone) {
+        this.phone = phone;
+    }
+
+    /**
+     *
+     * @param {string} address
+     */
+    setAddress(address) {
+        this.address = address;
+    }
+
+    /**
+     *
+     * @param {string} email
+     */
+    setEmail(email) {
+        this.email = email;
     }
 }
 

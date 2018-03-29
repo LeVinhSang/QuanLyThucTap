@@ -18,18 +18,18 @@ class Lecturer {
 
     /**
      *
-     * @param {Contact} contact
+     * @param {int} phone
      */
-    setContact(contact) {
-        this.contact = contact;
+    setPhone(phone) {
+        this.phone = phone;
     }
 
     /**
      *
-     * @return {Contact|*}
+     * @return {phone|*}
      */
-    getContact() {
-        return this.contact;
+    getPhone() {
+        return this.phone;
     }
 
     /**
@@ -46,6 +46,38 @@ class Lecturer {
      */
     setId(id) {
         this.id = id;
+    }
+
+    /**
+     *
+     * @param {string} email
+     */
+    setEmail(email) {
+        this.email = email;
+    }
+
+    /**
+     *
+     * @return {string|*}
+     */
+    getEmail() {
+        return this.email;
+    }
+
+    /**
+     *
+     * @param  {string} address
+     */
+    setAddress(address) {
+        this.address = address;
+    }
+
+    /**
+     *
+     * @return {string|*}
+     */
+    getAddress() {
+        return this.address;
     }
 
 }
