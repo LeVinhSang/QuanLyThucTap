@@ -4,7 +4,8 @@ exports.up = function(knex, Promise) {
         table.increments('id');
         table.integer('intern_id').notNull();
         table.integer('internship_id').notNull();
-        table.string('status').notNull()
+        table.string('status').notNull();
+        table.datetime('deleted_at')
     })
 };
 
