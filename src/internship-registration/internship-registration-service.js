@@ -2,22 +2,29 @@ const status = require('./registration-statuses');
 
 class InternShipRegistrationService {
 
-    constructor(knex) {
-        this.knex   = knex;
+    constructor(connection) {
+        this.connection   = connection;
     }
 
     send(registration) {
-        return this.knex.from('registrations').insert({
+        return this.connection.from('registrations').insert({
             intern_id: registration.getIntern().getId(),
             intern_ship_id: registration.getInternShip().getId(),
             status: status.PENDING
-        })
+        });
     }
 
     confirm(id) {
-        return this.knex.from('registrations').update({
+        return this.connection.from('registrations').update({
             status: status.CONFIRMED
         }).where('id', id);
+    }
+
+    update(registration) {
+        return this.connection('registrations').update({
+            intern_id: registration.getIntern().getId(),
+            intern_ship_id: registration.getInternShip().getId()
+        }).where({id: registration.getId()})
     }
 
 }

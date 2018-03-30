@@ -25,7 +25,7 @@ class Internship {
      *
      * @return {CompanyManager}
      */
-    getCompananyManager() {
+    getCompanyManager() {
         return this.companyManager;
     }
 

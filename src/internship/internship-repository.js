@@ -1,10 +1,18 @@
 class InternshipRepository {
 
-    constructor(knex) {
-        this.knex = knex;
+    constructor(connecction) {
+        this.connection = connection;
     }
 
-    all() {
-        // todo
+    /**
+     *
+     * @param {Internship} internship
+     * @return {Promise <void> }
+     */
+    add(internship) {
+        return this.connection('internships').insert({
+            duration_id: internship.getDuration().getId(),
+            status: internship.getCompanyManager().getId()
+        });
     }
 }

@@ -1,14 +1,13 @@
 const express        = require('express');
 const router         = express.Router();
-const UserController = require('../http/controller/user-controller');
-const userRequest    = require('../http/middleware/user-request');
+const InternController = require('../http/controller/intern-controller');
+const internRequest    = require('../http/middleware/intern/intern-request');
 
-let userController   = new UserController();
+let internController   = new InternController();
 
 
-router.get('/user/:user_name');
-router.post('/user', userRequest, userController.create);
-router.put('/user', userRequest, userController.update);
-router.delete('/user', userController.remove);
+router.post('/intern', internRequest, internController.create);
+router.put('/intern/:id', internRequest, internController.update);
+router.delete('/intern/:id', internController.remove());
 
 module.exports = router;

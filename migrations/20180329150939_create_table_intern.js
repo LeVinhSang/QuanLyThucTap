@@ -4,11 +4,11 @@ exports.up = function(knex, Promise) {
         table.increments('id');
         table.integer('code').notNull();
         table.string('name').notNull();
+        table.string('sex');
         table.string('status').notNull();
         table.integer('phone');
         table.string('email');
         table.string('address');
-        table.datetime('deleted_at')
     });
 };
 

@@ -1,13 +1,17 @@
 const knex                          = require('./database/knex-connection');
-const InternshipRegistrationService = require('./src/internship-registration/internship-registration-service');
+const InternController = require('./http/controller/intern-controller');
 
 
-let internshipRegistrationService = new InternshipRegistrationService(knex);
 
-let registration = {'intern_id': 1, 'intern_ship_id': 1, 'status': 'pending'};
+let internController = new InternController;
+
+let intern = {'code': 1400618, 'name': 'Sang',
+    'phone': '01648021510', 'email': 'sanglv@sphinx-software.com',
+    'address': '', 'sex': 'male'
+};
 
 function Test() {
-    internshipRegistrationService.send(registration);
+    internController.create(intern);
     console.log('success')
 }
 

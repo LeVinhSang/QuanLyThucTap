@@ -58,6 +58,38 @@ class Intern {
 
     /**
      *
+     * @return {string | null}
+     */
+    getStauts() {
+        return this.status;
+    }
+
+    /**
+     *
+     * @return {string|*}
+     */
+    getSex() {
+        return this.sex;
+    }
+
+    /**
+     *
+     * @return {int|*}
+     */
+    getId() {
+        return this.id;
+    }
+
+    /**
+     *
+     * @param {int} id
+     */
+    setId(id) {
+        this.id = id;
+    }
+
+    /**
+     *
      * @param {int} phone
      */
     setPhone(phone) {
@@ -78,6 +110,22 @@ class Intern {
      */
     setEmail(email) {
         this.email = email;
+    }
+
+    /**
+     *
+     * @param {string} status
+     */
+    setStatus(status) {
+        this.status = status;
+    }
+
+    /**
+     *
+     * @param {string} sex
+     */
+    setSex(sex) {
+        this.sex = sex;
     }
 }
 

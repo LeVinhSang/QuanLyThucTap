@@ -34,8 +34,6 @@ class User {
         this.password = password;
     }
 
-    set
-
 }
 
 module.exports = User;
