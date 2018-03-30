@@ -1,6 +1,23 @@
 class Duration {
     constructor(startDate, endDate) {
-        // todo
+        this.startDate = startDate;
+        this.endDate   = endDate;
+    }
+
+    /**
+     *
+     * @return {*}
+     */
+    getStartDate() {
+        return this.startDate;
+    }
+
+    /**
+     *
+     * @return {*}
+     */
+    getEndDate() {
+        return this.endDate;
     }
 }
 

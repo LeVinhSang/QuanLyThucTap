@@ -1,12 +1,12 @@
 
 exports.up = function(knex, Promise) {
-    return knex.schema.createTable('course_internships', function (table) {
+    return knex.schema.createTable('duration', function (table) {
         table.increments('id');
-        table.date('start_time').notNull();
-        table.date('information');
+        table.date('startDate').notNull();
+        table.date('endDate').notNull();
     });
 };
 
 exports.down = function(knex, Promise) {
-    return knex.schema.dropTable('course_internships');
+    return knex.schema.dropTable('duration');
 };

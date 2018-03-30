@@ -11,7 +11,6 @@ class InternshipList {
         })
     }
 
-    // todo
 }
 
 module.exports = InternshipList;
