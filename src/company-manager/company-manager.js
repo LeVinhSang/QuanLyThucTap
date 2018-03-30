@@ -16,7 +16,7 @@ class CompanyManager {
 
     /**
      *
-     * @return {string|*}
+     * @return {string}
      */
     getName() {
         return this.name;
@@ -84,6 +84,22 @@ class CompanyManager {
      */
     getAddress() {
         return this.address;
+    }
+
+    /**
+     *
+     * @return {string|*}
+     */
+    getGender() {
+        return this.gender;
+    }
+
+    /**
+     *
+     * @param {string} gender
+     */
+    setGender(gender) {
+        this.gender = gender;
     }
 
 }

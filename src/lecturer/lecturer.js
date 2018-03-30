@@ -2,10 +2,26 @@ class Lecturer {
 
     /**
      *
+     * @param {int} code
+     */
+    constructor(code) {
+        this.code = code;
+    }
+
+    /**
+     *
+     * @return {int}
+     */
+    getCode() {
+        return this.code;
+    }
+
+    /**
+     *
      * @param {string} name
      */
-    constructor(name) {
-        this.name = name;
+    setName(name) {
+        this.name = name
     }
 
     /**
@@ -78,6 +94,22 @@ class Lecturer {
      */
     getAddress() {
         return this.address;
+    }
+
+    /**
+     *
+     * @param {string} gender
+     */
+    setGender(gender) {
+        this.gender = gender;
+    }
+
+    /**
+     *
+     * @return {string|*}
+     */
+    getGender() {
+        return this.gender;
     }
 
 }

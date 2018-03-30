@@ -8,6 +8,10 @@ class Company {
         this.name = name;
     }
 
+    getName() {
+        return this.name;
+    }
+
     /**
      *
      * @return {int}

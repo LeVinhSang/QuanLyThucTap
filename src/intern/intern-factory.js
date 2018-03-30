@@ -8,7 +8,7 @@ class InternFactory {
         intern.setName(internRaw.name);
         intern.setPhone(internRaw.phone);
         intern.setEmail(internRaw.email);
-        intern.setSex(internRaw.sex);
+        intern.setGender(internRaw.gender);
         intern.setAddress(internRaw.address);
         return intern;
     }

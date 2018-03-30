@@ -21,7 +21,7 @@ class InternRepository {
             phone: intern.getPhone(),
             email: intern.getEmail(),
             address: intern.getAddress(),
-            sex: intern.getSex(),
+            gender: intern.getGender(),
             status: status.PENDING
         });
     }
@@ -38,7 +38,7 @@ class InternRepository {
             phone: intern.getPhone(),
             email: intern.getEmail(),
             address: intern.getAddress(),
-            sex: intern.getSex()
+            gender: intern.getGender()
         }).where({
             id: intern.getId()
         });

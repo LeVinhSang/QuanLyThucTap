@@ -68,8 +68,8 @@ class Intern {
      *
      * @return {string|*}
      */
-    getSex() {
-        return this.sex;
+    getGender() {
+        return this.gender;
     }
 
     /**
@@ -122,10 +122,10 @@ class Intern {
 
     /**
      *
-     * @param {string} sex
+     * @param {string} gender
      */
-    setSex(sex) {
-        this.sex = sex;
+    setGender(gender) {
+        this.gender = gender;
     }
 }
 

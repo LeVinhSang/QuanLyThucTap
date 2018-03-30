@@ -1,6 +1,10 @@
 class InternshipRepository {
 
-    constructor(connecction) {
+    /**
+     *
+     * @param connection
+     */
+    constructor(connection) {
         this.connection = connection;
     }
 
@@ -12,7 +16,9 @@ class InternshipRepository {
     add(internship) {
         return this.connection('internships').insert({
             duration_id: internship.getDuration().getId(),
-            status: internship.getCompanyManager().getId()
+            company_manager_id: internship.getCompanyManager().getId()
         });
     }
 }
+
+module.exports = InternshipRepository;
