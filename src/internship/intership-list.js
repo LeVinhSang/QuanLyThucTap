@@ -1,6 +1,6 @@
 class InternshipList {
 
-    constructor(lecturer, interns = []) {
+    constructor(lecturer, interns ) {
         this.lecturer = lecturer;
         this.interns = interns;
     }

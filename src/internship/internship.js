@@ -5,8 +5,16 @@ class Internship {
         this.companyManager = companyManager;
     }
 
-    getList() {
+    getInternShipList() {
         return this.internShipList;
+    }
+
+    getDuration() {
+        return this.duration;
+    }
+
+    getCompanyManager() {
+        return this.duration;
     }
 }
 
