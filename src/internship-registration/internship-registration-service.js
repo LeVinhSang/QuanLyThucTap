@@ -9,7 +9,7 @@ class InternShipRegistrationService {
     send(registration) {
         return this.connection.from('registrations').insert({
             intern_id: registration.getIntern().getId(),
-            intern_ship_id: registration.getInternShip().getId(),
+            internship_id: registration.getInternShip().getId(),
             status: status.PENDING
         });
     }
@@ -18,13 +18,6 @@ class InternShipRegistrationService {
         return this.connection.from('registrations').update({
             status: status.CONFIRMED
         }).where('id', id);
-    }
-
-    update(registration) {
-        return this.connection('registrations').update({
-            intern_id: registration.getIntern().getId(),
-            intern_ship_id: registration.getInternShip().getId()
-        }).where({id: registration.getId()})
     }
 
 }

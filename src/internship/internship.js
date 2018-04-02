@@ -1,7 +1,14 @@
 class Internship {
-    constructor(duration, internshipList, companyManager) {
+
+    /**
+     * 
+     * @param{string} duration
+     * @param {InternList} internList
+     * @param {CompanyManager} companyManager
+     */
+    constructor(duration, internList, companyManager) {
         this.duration = duration;
-        this.internShipList = internshipList;
+        this.internList = internList;
         this.companyManager = companyManager;
     }
 
@@ -18,7 +25,7 @@ class Internship {
      * @return {Internship}
      */
     getList() {
-        return this.internShipList;
+        return this.internList;
     }
 
     /**

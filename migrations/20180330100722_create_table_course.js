@@ -2,10 +2,9 @@
 exports.up = function(knex, Promise) {
     return knex.schema.createTable('courses', function (table) {
         table.increments('id');
-        table.string('duration').notNull();
+        table.string('duration_id').notNull();
         table.string('info');
-        table.string('status').notNull();
-        table.datetime('deleted_at');
+        table.string('status').notNull()
     })
 };
 

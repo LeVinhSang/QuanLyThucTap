@@ -1,16 +1,25 @@
-exports.registerInternShip = function (request, response) {
-    let registration = new InternshipRegistration(request.user, request.internship);
-    let service      = request.app.get('registration.service');
+class RegistrationController {
 
-    service.send(registration).then(() => {
-        // todo
-    });
-};
+    send(req, res, next) {
+        let service = req.app.get('registration.service');
+        service.send(req.registration).then( () => {
+            res.send({message: 'success'});
+        }).catch(next);
+    }
+    
+    confirm(req, res, next) {
+        let service = req.app.get('registration.service');
+        service.confirm(req.registration).then( () => {
+            res.send({message: 'success'});
+        }).catch(next);
+    }
+    
+    update(req, res, next) {
+        let service = req.app.get('registration.service');
+        service.edit(req.registration).then( () => {
+            res.send({message: 'success'});
+        }).catch(next)
+    }
+}
 
-exports.confirm = function (request, response) {
-    let service = request.app.get('registration.service');
-
-    service.confirm(request.params.id).then(() => {
-        // todo
-    });
-};
+module.exports = RegistrationController;

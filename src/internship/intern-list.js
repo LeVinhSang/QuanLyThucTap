@@ -1,4 +1,4 @@
-class InternshipList {
+class InternList {
 
     constructor(lecturer, interns = []) {
         this.interns = interns;
@@ -9,8 +9,6 @@ class InternshipList {
             intern: intern
         })
     }
-
-    // todo
 }
 
-module.exports = InternshipList;
+module.exports = InternList;

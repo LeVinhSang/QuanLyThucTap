@@ -2,7 +2,7 @@ const Intern = require('./intern');
 
 class InternFactory {
     
-    makeFromRequest(internRaw) {
+    make(internRaw) {
         let intern = new Intern(internRaw.code);
         intern.setId(internRaw.id);
         intern.setName(internRaw.name);
