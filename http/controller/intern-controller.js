@@ -16,9 +16,16 @@ class InternController {
 
     remove(req, res, next) {
         let repo = req.app.get('intern.repo');
-        repo.remove(req.params.id).then( () => {
+        repo.delete(req.params.id).then( () => {
             res.send({message: 'success'});
-        }).catch(next)
+        }).catch(next);
+    }
+
+    confirm(req, res, next) {
+        let repo = req.app.get('intern.repo');
+        repo.confirm(req.params.id).then( () => {
+            res.send({message: 'success'});
+        }).catch(next);
     }
 }
 

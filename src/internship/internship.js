@@ -5,11 +5,13 @@ class Internship {
      * @param{string} duration
      * @param {InternList} internList
      * @param {CompanyManager} companyManager
+     * @param {string} status
      */
-    constructor(duration, internList, companyManager) {
+    constructor(duration, internList, companyManager, status) {
         this.duration = duration;
         this.internList = internList;
         this.companyManager = companyManager;
+        this.status = status;
     }
 
     /**
@@ -36,6 +38,14 @@ class Internship {
         return this.companyManager;
     }
 
+    /**
+     * 
+     * @return {string|*}
+     */
+    getStatus() {
+        return this.status;
+    }
+    
     /**
      *
      * @return {int|*}

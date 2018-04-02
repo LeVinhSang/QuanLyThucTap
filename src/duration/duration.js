@@ -2,8 +2,8 @@ class Duration {
 
     /**
      *
-     * @param {date} startDate
-     * @param {date} endDate
+     * @param {string} startDate
+     * @param {string} endDate
      */
     constructor(startDate, endDate) {
         this.starDate = startDate;

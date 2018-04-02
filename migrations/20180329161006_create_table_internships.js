@@ -5,6 +5,7 @@ exports.up = function(knex, Promise) {
         table.integer('duration_id').notNull();
         table.integer('course_id');
         table.integer('company_manager_id');
+        table.string('status');
         table.datetime('deleted_at')
     })
 };

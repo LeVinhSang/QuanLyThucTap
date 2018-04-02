@@ -1,17 +1,19 @@
-const Course = require('./course');
+const Course           = require('./course');
+const DurationProvider = require('../duration/duration-provider');
+
+let durationProvider   = new DurationProvider();
 
 class CourseFactory {
 
     make(courseRaw) {
-        let course = new Course(courseRaw.code);
-        course.setId(courseRaw.id);
-        course.setName(courseRaw.name);
-        course.setPhone(courseRaw.phone);
-        course.setEmail(courseRaw.email);
-        course.setGender(courseRaw.gender);
-        course.setAddress(courseRaw.address);
-        return course;
+        return durationProvider.provide(courseRaw.duration_id)
+            .then(duration => {
+                let course = new Course(duration, courseRaw.name);
+                course.setId(courseRaw.id);
+                course.setInfo(courseRaw.info);
+                return course;
+            });
     }
 }
 
-module.exports = courseFactory;
+module.exports = CourseFactory;

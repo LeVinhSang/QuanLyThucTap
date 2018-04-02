@@ -127,6 +127,22 @@ class Intern {
     setGender(gender) {
         this.gender = gender;
     }
+
+    /**
+     *
+     * @return {string | null}
+     */
+    getImages() {
+        return this.images;
+    }
+
+    /**
+     *
+     * @param {string} images
+     */
+    setImages(images) {
+        this.images = images;
+    }
 }
 
 module.exports = Intern;

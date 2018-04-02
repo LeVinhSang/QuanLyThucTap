@@ -29,12 +29,13 @@ class InternRepository {
     /**
      *
      * @param {Intern} intern
-     * @return {*}
+     * @return {Promise <void>}
      */
     edit(intern) {
         return this.connection('interns').update({
             code: intern.getCode(),
             name: intern.getName(),
+            images: intern.getImages(),
             phone: intern.getPhone(),
             email: intern.getEmail(),
             address: intern.getAddress(),
@@ -44,12 +45,23 @@ class InternRepository {
         });
     }
 
-    remove(id) {
+
+    /**
+     *
+     * @param {int} id
+     * @return {Promise <void>}
+     */
+    delete(id) {
         return this.connection('interns').update({
            status: status.FINISHED
         }).where({id: id});
     }
 
+    /**
+     *
+     * @param {int} id
+     * @return {Promise <void>}
+     */
     confirm(id) {
         return this.connection('interns').update({
             status: status.DOING
