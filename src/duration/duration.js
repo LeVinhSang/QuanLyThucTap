@@ -1,3 +1,4 @@
+
 class Duration {
     constructor(startDate, endDate) {
         this.startDate = startDate;

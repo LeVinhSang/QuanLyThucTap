@@ -1,7 +1,7 @@
 const express        = require('express');
 const router         = express.Router();
 const UserController = require('../http/controller/user-controller');
-const userRequest    = require('../http/middleware/user-request');
+const userRequest    = require('../http/middleware/user/user-request');
 
 let userController   = new UserController();
 

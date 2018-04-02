@@ -1,4 +1,9 @@
 class Company {
+
+    /**
+     *
+     * @param {string} manager
+     */
     constructor(manager) {
         this.manager = manager;
     }
@@ -13,9 +18,9 @@ class Company {
 
     /**
      *
-     * @param {int} Id
+     * @param {int} id
      */
-    setId(Id) {
+    setId(id) {
         this.id = id;
     }
 
@@ -58,6 +63,22 @@ class Company {
      */
     getPhone() {
         return this.phone;
+    }
+
+    /**
+     *
+     * @param {string} name
+     */
+    setName(name) {
+        this.name = name;
+    }
+
+    /**
+     *
+     * @return {string|*}
+     */
+    getName() {
+        return this.name;
     }
 
 }

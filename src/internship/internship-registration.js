@@ -19,10 +19,18 @@ class InternshipRegistration {
         return this.intern;
     }
 
+    /**
+     *
+     * @return {Internship|*}
+     */
     getInternShip() {
         return this.internship;
     }
 
+    /**
+     *
+     * @return {String|*}
+     */
     getStatus() {
         return this.status;
     }

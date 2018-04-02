@@ -14,3 +14,4 @@ class InternshipList {
 }
 
 module.exports = InternshipList;
+
