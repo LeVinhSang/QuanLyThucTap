@@ -4,7 +4,7 @@ class RegistrationNotExistedPolicy {
         this.connection = connection;
     }
 
-    exist(intern) {
+    check(intern) {
         return this.connection('registrations').where('intern_id', intern.getId()).then(function(registrationRawData){
             return (!registrationRawData.length);
         });
