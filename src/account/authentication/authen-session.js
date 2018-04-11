@@ -1,6 +1,6 @@
 const Guest = require('./guest');
 
-class AuthenSession {
+class AuthSession {
 
     constructor(userRepository) {
         this.repository = userRepository;
@@ -31,4 +31,4 @@ class AuthenSession {
     }
 }
 
-module.exports = AuthenSession;
+module.exports = AuthSession;
