@@ -1,19 +1,29 @@
 class User {
 
-    constructor(userName, passWord){
-        this.userName = userName;
-        this.passWord = passWord;
+    constructor(personalInformation) {
+        this.personalInformation = personalInformation;
     }
 
-    getUserName(){
-        return this.userName;
+    getPersonalInformation() {
+        return this.personalInformation;
     }
 
-    getPassword(){
-        return this.passWord;
+    setCredential(credential) {
+        this.credential = credential;
     }
 
-    setRole(role){
+    getCredential() {
+        return this.credential;
+    }
+    setId(id) {
+        this.id = id;
+    }
+
+    getId() {
+        return this.id;
+    }
+
+    setRole(role) {
         this.role = role;
     }
 
