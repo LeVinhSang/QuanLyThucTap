@@ -19,7 +19,7 @@ class AuthSession {
     }
 
     isGuest() {
-        return !this.check();
+        return this.check();
     }
 
     user() {
