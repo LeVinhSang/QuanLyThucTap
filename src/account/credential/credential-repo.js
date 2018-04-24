@@ -4,7 +4,7 @@ class CredentialService {
         this.connection = connection;
     }
 
-    getCredential(credential){
+    getCredentialbyUsername(credential){
         this.connection('credentials').where({username : credential.getUsername()});
     }
 }
