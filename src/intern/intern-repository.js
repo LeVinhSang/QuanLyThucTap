@@ -6,8 +6,9 @@ class InternRepository {
      *
      * @param connection
      */
-    constructor(connection) {
-        this.connection = connection;
+    constructor(connection, internFactory) {
+        this.connection    = connection;
+        this.internFactory = internFactory;
     }
 
     /**
@@ -23,7 +24,7 @@ class InternRepository {
             address: intern.getAddress(),
             gender: intern.getGender(),
             status: status.PENDING
-        });
+        }).then(() => this.internFactory.makeFromDB(intern));
     }
 
     /**
@@ -48,6 +49,11 @@ class InternRepository {
         return this.connection('interns').update({
            status: status.FINISHED
         }).where({id: id});
+    }
+
+    detail(id) {
+        return this.connection('interns').where({id : id})
+            .then((internRawData) => this.internFactory.makeFromDB(internRawData));
     }
 
     confirm(id) {
