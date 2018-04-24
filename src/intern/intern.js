@@ -60,7 +60,7 @@ class Intern {
      *
      * @return {string | null}
      */
-    getStauts() {
+    getStatus() {
         return this.status;
     }
 
