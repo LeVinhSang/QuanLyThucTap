@@ -1,15 +1,22 @@
 class UserRepository {
 
-    constructor(connection, hash) {
+    constructor(connection, userFactory) {
         this.connection = connection;
-        this.hash       = hash;
+        this.userFactory = userFactory;
     }
 
-    getUser(user){
-        return this.connection('users').where({name : user.getName()})
-            .then(function(userRawData){
-                return !userRawData.length;
+    get(id){
+        return this.connection('users').where({id:id})
+            .then((userRawData) => {
+                return this.userFactory.makeFromDB(userRawData);
             });
+    }
+
+    getByUserName(userName){
+        return this.connection('users').where({user_name: userName})
+            .then((userRawData) => {
+                return this.userFactory.makeFromDB(userRawData);
+            })
     }
 
     add(user) {
