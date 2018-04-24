@@ -9,3 +9,5 @@ class UserFactory {
         return user;
     }
 }
+
+module.exports = UserFactory;
